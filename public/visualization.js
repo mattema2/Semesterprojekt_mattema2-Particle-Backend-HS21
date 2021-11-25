@@ -51,10 +51,10 @@ function updateVariables(data) {
 
         // Oben definierte Styles für Hintergrundfarbe und Breite des Balkens verwenden, um
         // den Progressbar im HTML-Dokument zu aktualisieren
-        document.getElementById("luxlevel-bar").style = colorStyle + widthStyle;
+        document.getElementById("helligkeitsverlauf-balken").style = colorStyle + widthStyle;
 
         // Text unterhalb des Balkens aktualisieren
-        document.getElementById("luxlevel-text").innerHTML = lux + " Lux"
+        document.getElementById("helligkeitsmessungs-text").innerHTML = lux + " Lux"
 
         // Durchschnitt aller bisherigen Messungen berechnen und in 'luxAverage' speichern
         var luxSum = 0;
@@ -67,8 +67,8 @@ function updateVariables(data) {
         // Durchschnittlichen Helligkeit (luxAverage) in Prozent umrechnen und als Balken und Text anzeigen
         var levelAverage = luxAverage * (100 / maxLevel);
         var widthStyleAverage = "width: " + levelAverage + "%;"
-        document.getElementById("luxlevel-bar2").style = widthStyleAverage;
-        document.getElementById("luxlevel-text2").innerHTML = luxAverage.toFixed(2) + " Lux"; // Auf 2 Nachkommastellen reduzieren
+        document.getElementById("durchschnittlicher-helligkeitsverlauf-balken").style = widthStyleAverage;
+        document.getElementById("durchschnittlicher-helligkeitsmessungs-text2").innerHTML = luxAverage.toFixed(2) + " Lux"; // Auf 2 Nachkommastellen reduzieren
 
         // Wert im Chart hinzufügen
         addData(lux);
@@ -117,7 +117,7 @@ function drawChart() {
         }
     };
     // LineChart initialisieren
-    chart = new google.visualization.LineChart(document.getElementById('luxlevel-chart'));
+    chart = new google.visualization.LineChart(document.getElementById('helligkeitsverlauf-diagramm'));
     chartData.removeRow(0); // Workaround: ersten (Dummy-)Wert löschen, bevor das Chart zum ersten mal gezeichnet wird.
     chart.draw(chartData, chartOptions); // Chart zeichnen
 }
@@ -141,3 +141,5 @@ function addData(lux) {
     // Chart neu rendern
     chart.draw(chartData, chartOptions);
 }
+
+

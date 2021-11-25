@@ -21,26 +21,26 @@
 
         <!-- Aktueller Helligkeit als Progressbar -->
         <div class="progress">
-            <div id="luxlevel-bar" class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+            <div id="helligkeitsverlauf-balken" class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
         </div>
 
         <!-- Aktueller Helligkeit als Text -->
-        <p id="luxlevel-text">Warte auf erste Messung...</p>
+        <p id="helligkeitsmessungs-text">Bitte etwas Geduld die erste Messung erfolg...</p>
 
         <h2 class="mt-5">Helligkeit (Durchschnittlicher Wert)</h2>
 
         <!-- Durchschnittlicher Helligkeit als Progressbar -->
         <div class="progress">
-            <div id="luxlevel-bar2" class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+            <div id="durchschnittlicher-helligkeitsverlauf-balken" class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
         </div>
         
         <!-- Durchschnittlicher Helligkeit als Text -->
-        <p id="luxlevel-text2">Warte auf erste Messung...</p>
+        <p id="durchschnittlicher-helligkeitsmessungs-text2">Bitte etwas Geduld die erste Messung erfolg...</p>
 
         <h2 class="mt-5">Helligkeit (Verlauf)</h2>
 
         <!-- Verlauf Helligkeit als Chart -->
-        <div id="luxlevel-chart" style="max-width:100%; height:400px"></div>
+        <div id="helligkeitsverlauf-diagramm" style="max-width:100%; height:400px"></div>
         
         <!-- Beleuchtungszeit -->
         <hr>
@@ -49,6 +49,7 @@
         <p>Beleuchtungszeit: <span id="shineTime"></span></p>
         <button onclick="shineTime()">Beleuchtungszeit anfordern</button>
         <br>
+        <hr>
     </div>
 
     <!-- Bootstrap JavaScript -->
