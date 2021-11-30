@@ -39,7 +39,6 @@ function updateVariables(data) {
         var level = lux * (100 / maxLevel);
 
         // Farbe des Balkens abhängig von Level festlegen
-        // Liste aller unterstützten Farben: https://www.w3schools.com/cssref/css_colors.asp
         if (level < 25) {
             color = "DeepSkyBlue";
         } else {
@@ -85,9 +84,7 @@ function updateVariables(data) {
         // Wert am Ende des Arrays 'allTimeMeasurements' hinzufügen
         allTimeMeasurements.push(beleuchtungszeit);
 
-        //
         // Beleuchtungszeit anzeigen
-        //
         document.getElementById("shineTime").innerHTML = "Die effektive Beleuchtungszeit beträgt: " + beleuchtungszeit + " Minuten"; 
     }
 }
