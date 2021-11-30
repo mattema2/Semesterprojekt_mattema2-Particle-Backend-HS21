@@ -20,8 +20,6 @@ function luxEvent(event) {
     try {        
         // Log the event in the database
         logger.logOne("MyDB", "Lux", data);
-        console.log("Hoi David_2");
-
         
 
         // send data to all connected clients
@@ -44,8 +42,7 @@ function shineEvent(event) {
     try {        
         // Log the event in the database
         logger.logOne("MyDB", "Beleuchtungszeit", data);
-        console.log("Hoi David");
-    
+
         // send data to all connected clients
         exports.sendEvent(data);
     } catch (error) {

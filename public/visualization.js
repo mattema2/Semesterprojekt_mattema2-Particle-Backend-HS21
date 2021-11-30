@@ -76,7 +76,7 @@ function updateVariables(data) {
         //
         // Beleuchtungszeit anzeigen
         //
-        document.getElementById("shineTime").innerHTML = "Die effektiefe Beleuchtungszeit beträgt " + Beleuchtungszeit; 
+        document.getElementById("shineTime").innerHTML = "Die effektiefe Beleuchtungszeit beträgt " + shineTime; 
 
     }
 }
