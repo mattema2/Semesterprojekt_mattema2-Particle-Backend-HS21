@@ -18,6 +18,9 @@ initSSE();
 // Array, in dem alle empfangenen Lux-Werte gespeichert werden.
 var allMeasurements = [];
 
+// Array, in dem alle empfangenen Lux-Werte gespeichert werden.
+var allTimeMeasurements = [];
+
 // Maximaler Lux Level für die Berechnung des Prozentwerts und als maximaler Wert für das Chart.
 var maxLevel = 100;
 
@@ -73,11 +76,19 @@ function updateVariables(data) {
         // Wert im Chart hinzufügen
         addData(lux);
 
+    }
+    if (data.eventName === "Beleuchtungszeit") {
+        // Erhaltenen Wert in der Variable 'Beleuchtungszeit' speichern
+        var Beleuchtungszeit = Number(data.eventData);
+        //console.log(Beleuchtungszeit);
+
+        // Wert am Ende des Arrays 'allMeasurements' hinzufügen
+        allTimeMeasurements.push(Beleuchtungszeit);
+
         //
         // Beleuchtungszeit anzeigen
         //
-        document.getElementById("shineTime").innerHTML = "Die effektiefe Beleuchtungszeit beträgt " + shineTime; 
-
+        document.getElementById("shineTime").innerHTML = "Die effektive Beleuchtungszeit beträgt: " + Beleuchtungszeit; 
     }
 }
 
