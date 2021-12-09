@@ -78,14 +78,15 @@ function updateVariables(data) {
     }
     if (data.eventName === "Beleuchtungszeit") {
         // Erhaltenen Wert in der Variable 'beleuchtungszeit' speichern
-        var beleuchtungszeit = Number(data.eventData);
+        
+        var beleuchtungszeit = data.eventData;
         //console.log(beleuchtungszeit);
 
         // Wert am Ende des Arrays 'allTimeMeasurements' hinzufügen
         allTimeMeasurements.push(beleuchtungszeit);
 
         // Beleuchtungszeit anzeigen
-        document.getElementById("shineTime").innerHTML = "Die effektive Beleuchtungszeit beträgt: " + beleuchtungszeit + " Minuten"; 
+        document.getElementById("shineTime").innerHTML = "Die effektive Beleuchtungszeit beträgt: " + beleuchtungszeit; 
     }
 }
 
